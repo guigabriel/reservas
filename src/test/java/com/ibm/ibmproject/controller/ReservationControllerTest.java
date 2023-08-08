@@ -97,18 +97,4 @@ class ReservationControllerTest {
 
     }
 
-//    @Test
-//    void testUpdate() throws Exception {
-//        Date inicio = format.parse("2023/08/22");
-//        Date fim = format.parse("2023/08/23");
-//        Reservation reserva = new Reservation(1, "guilherme", inicio, fim, 4, "CONFIRMADA");
-//
-//        when(reservationService.update((int) ArgumentMatchers.anyLong(), ArgumentMatchers.any(Reservation.class))).thenReturn(reserva);
-//        mockMvc.perform(MockMvcRequestBuilders.put("/reservas/1", 1)
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .content("{\"id\":1,\"nomeHospede\":\"guilherme\",\"dataInicio\":\"2023-08-22\",\"dataFim\":\"2023-08-23\",\"quantidadePessoas\":4,\"status\":\"CONFIRMADA\"}"))
-//                .andDo(print())
-//                .andExpect(status().isOk())
-//                .andExpect(jsonPath("$.status", Matchers.equalTo("pendente")));
-//    }
 }

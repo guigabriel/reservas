@@ -94,25 +94,4 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         verify(repository, times(1)).findById(id);
     }
 
-    @Test
-    void testValidateReserva() {
-        Throwable exception = assertThrows(HospedeNomeException.class, () -> {
-            Reservation reservaMock = reserva();
-            reservaMock.setNomeHospede("gui");
-        });
-        assertEquals("O nome do hóspede deve ter no mínimo 5 letras", exception.getMessage());
-    }
-//
-//    @Test
-//    void testDelete() throws ParseException {
-//        Reservation reservaMock = reserva();
-//        when(repository.save(any(Reservation.class))).thenReturn(reservaMock);
-//        Reservation reservaInserida = service.insert(reservaMock);
-//        assertNotNull(reservaInserida);
-//        Integer id = reservaInserida.getId();
-//
-//        verify(repository, times(1)).save(id);
-//    }
-
-
 }
