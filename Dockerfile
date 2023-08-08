@@ -1,4 +1,4 @@
-FROM adoptopenjdk:17-jre-hotspot
+FROM adoptopenjdk:20-jre-hotspot
 WORKDIR /app
 COPY target/ibmproject-0.0.1-SNAPSHOT.jar /app/app.jar
 EXPOSE 8080
