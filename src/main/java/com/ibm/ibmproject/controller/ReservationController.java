@@ -43,4 +43,26 @@ public class ReservationController {
         return ResponseEntity.ok().body(result);
     }
 
+    @DeleteMapping("/{id}/cancelar")
+    public ResponseEntity<Reservation> delete(@PathVariable Integer id) {
+        Reservation result = service.delete(id);
+        return ResponseEntity.ok().body(result);
+    }
+
+    @GetMapping("/confirmadas")
+    public ResponseEntity<List<Reservation>> findAllConfirmed(){
+        List<Reservation> confirmadas = service.findAllConfirmed();
+        return ResponseEntity.ok().body(confirmadas);
+    }
+    @GetMapping("/pendentes")
+    public ResponseEntity<List<Reservation>> findAllPending(){
+        List<Reservation> pendentes = service.findAllPending();
+        return ResponseEntity.ok().body(pendentes);
+    }
+    @GetMapping("/canceladas")
+    public ResponseEntity<List<Reservation>> findAllCanceled(){
+        List<Reservation> canceladas = service.findAllCanceled();
+        return ResponseEntity.ok().body(canceladas);
+    }
+
 }
